@@ -8,9 +8,9 @@
 library(here)           # here
 library(tidyverse)      # readr --> read_csv().
 
-neurons <- read_csv(file=here("data", "peignier", "connectome.csv"))
-muscles <- read_csv(file=here("data", "peignier", "neurons_to_muscles.csv"))
-sensory <- read_csv(file=here("data", "peignier", "sensory.csv"))
+neurons <- read_csv(file=here("connectome.csv"))
+muscles <- read_csv(file=here("neurons_to_muscles.csv"))
+sensory <- read_csv(file=here("sensory.csv"))
 
 cells <- muscles %>% transmute(CELL=Muscle, TYPE="MUSCLE")
 cells <- cells %>% distinct(CELL, TYPE)
