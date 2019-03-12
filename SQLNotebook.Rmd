@@ -16,7 +16,7 @@ Please remember to disconnect from the SQLite database when you have finished or
 
 ```{sh}
 # The connect function doesn't like working with an existing database (sheet already exists).
-rm data/sql/pregnancy.db
+rm NeuronConnect.db
 ```
 ```{python}
 '''
@@ -40,9 +40,9 @@ def slugify(text, lower=1):
     return text
 
 #Replace with a database name
-con = sqlite3.connect(r'data\sql\NeuronConnect.db')
+con = sqlite3.connect(r'NeuronConnect.db')
 #replace with the complete path to your excel workbook
-wb = load_workbook(filename=r'data\sql\NeuronConnect.xlsx')
+wb = load_workbook(filename=r'NeuronConnect.xlsx')
 
 sheets = wb.get_sheet_names()
 #print(sheets)
