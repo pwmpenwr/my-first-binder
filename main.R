@@ -6,7 +6,9 @@
 # -----------------------------------------------------------------------------
 
 library(here)           # here
-library(tidyverse)      # readr --> read_csv().
+library(magrittr)      # readr --> read_csv().
+library(dplyr)      # readr --> read_csv().
+library(readr)
 
 neurons <- read_csv(file=here("connectome.csv"))
 muscles <- read_csv(file=here("neurons_to_muscles.csv"))
