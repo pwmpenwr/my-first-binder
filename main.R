@@ -35,7 +35,8 @@ neuro <- neurons %>% select(-X1,-Neurotransmitter)
 test <- neuro %>% filter(Neuron=="ADAL"|Neuron=="ADAR")
 
 c4<-full_join(cells, c3, by=c("CELL"="Neuron"))
-
+temp <- sensory %>% select(Neuron, Weight, Neurotransmitter)
+c5<-full_join(temp, c4, by=c("Neuron"="CELL"))
 
 
 # A bit of fiddling with igraph.
