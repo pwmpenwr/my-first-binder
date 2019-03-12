@@ -1,4 +1,6 @@
-install.packages("tidyverse")
+install.packages("magrittr")
+install.packages("dplyr")
+install.packages("readr")
 install.packages("here")
 install.packages("igraph")
 install.packages("petrinetR")
